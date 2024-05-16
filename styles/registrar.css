@@ -1,0 +1,47 @@
+.reportcard {
+    flex-wrap: wrap;
+}
+.report-card {
+    width: 9.5%;
+    height: 10vh;
+    background: linear-gradient(135deg,rgb(32, 32, 32), rgb(87, 87, 87), rgb(53, 53, 53));
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.7);
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.report-card:hover {
+    background: linear-gradient(135deg,rgb(58, 58, 58), rgb(92, 92, 92), rgb(83, 83, 83));
+}
+
+.report-card p {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+
+.report-card img {
+    width: 50px;
+}
+
+code {
+    color: white;
+    float: right;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-size: 1.4rem;
+}
+
+

@@ -1,0 +1,364 @@
+.center {
+    right: 0;
+    width: 80%;
+}
+
+td {
+    padding: 10px;
+    padding-left: 20px;
+    border: none;
+}
+
+th {
+    padding: 20px;
+    border: none;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter1 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter1 select {
+   padding: 0;
+   margin-top: 17px;
+}
+.filter1 select:focus {
+    outline: none;
+}
+.filter input[type="search"]:focus {
+    border: 2px solid black;
+}
+
+.hr {
+  width: 100%;
+  border-bottom: 1px solid black;
+  margin-top: 0;
+}
+.user-tab {
+    display: flex;
+    align-items: center;
+}
+.user-table-btn {
+    display: flex;
+    gap: 0;
+}
+
+.user-table-btn button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(90, 90, 90);
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.teacher-student button,.pages button {
+    cursor: pointer;
+}
+
+.user-table-btn button:hover,.user-tab button:hover {
+    background-color: rgb(119, 119, 119);
+}
+
+.pages {
+    display: flex;
+    gap: 0;
+}
+
+.pages button {
+    padding: 0;
+    width: 100px;
+    background: transparent;
+    border: none;
+}
+
+.pages p {
+    background: linear-gradient(180deg,rgb(230, 230, 230), rgb(185, 185, 185));
+    padding: 6px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.user-tab {
+    display: flex;
+   justify-content: space-between;
+}
+
+.student-table select:focus {
+    outline: none;
+}
+
+.user-tab div {
+   display: flex;
+   gap: 0;
+}
+
+.user-tab select:focus {
+    outline: none;
+}
+
+.user-tab button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(90, 90, 90);
+    color: white;
+    font-size: 15px;
+}
+
+.teacher-student,.teacher-table,.student-table {
+    display: none;
+}
+
+.user-tab button.active {
+    background-color: rgb(0, 0, 0);
+}
+
+.teacher-student {
+    background-color: white;
+    padding: 20px;
+    margin-top: 110px;
+    border-radius: 5px;
+}
+
+tr a {
+    text-decoration: none;
+    color: red;
+    font-weight: normal;
+}
+
+tr a:hover {
+    text-decoration: underline;
+}
+
+.loads,.student-list,.subject-enrolled,.subjects,.year-sec,.department,.rooms {
+    width: 97%;
+    display: none;
+    background-color: white;
+    padding: 20px;
+    transform: translateY(-60px);
+    border-radius: 5px;
+}
+.year-sec,.department,.rooms {
+    width: 92.5%;
+    transform: translateY(-80px);
+}
+.entries {
+    color: rgb(88, 88, 88);
+}
+
+.in_info p {
+    color: rgb(63, 63, 63);
+    font-weight: 550;
+}
+
+.in_info span {
+    font-weight: normal;
+}
+
+.table-con-header {
+    width: 100%;
+    background-color: rgb(87, 87, 87);
+    padding: 20px 0 100px 30px;
+    display: flex;
+    font-weight: 600;
+    color: white;
+}
+
+.teacher-student {
+    margin-top: 0;
+    transform: translateY(-60px);
+    width: 97%;
+}
+
+.add-instructor-con,.assign-subject-instructor,.assign-subject-student,.add-student-form,.add-course,.add-year-section,.add-department,.add-room,.add-user {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.add-instructor-con form,.assign-subject-instructor form ,.assign-subject-student form,.add-student-form form,.add-course form,.add-year-section form,.add-department form,.add-room form,.add-user form {
+    width: 90%;
+}
+
+.instructor-form,.assign-subject-instructor div,.assign-subject-student div,.student-form,.add-course div ,.add-year-section div,.add-department div,.add-room div,.add-user div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 2px  2px 10px rgb(0, 0, 0, 0.5);
+}
+
+.add-instructor,.assign-sub,.add-student,.add-sub,.add-yearsec,.add-dept,.addroom,.adduser {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    font-size: 30px;
+    color: rgb(85, 85, 85);
+    font-weight: normal;
+}
+
+.close-add-instructor,.close-assign,.close-student,.close-add-student,.close-sub,.close-year,.close-dept,.close-room,.close-adduser {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 15px;
+    color: gray;
+    padding: 5px 10px;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.close-add-instructor:hover,.close-assign:hover,.close-student:hover,.close-add-student:hover,.close-sub:hover,.close-year:hover,.close-dept:hover,.close-room:hover,.close-adduser:hover {
+    background-color: rgb(224, 224, 224);
+    border-radius: 50px;
+}
+
+.save {
+    background-color:rgb(240, 45, 45);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.save:hover {
+    background-color:rgb(212, 34, 34);
+}
+
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gender div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(236, 236, 236);
+    padding: 10px 20px 0 20px;
+    border-radius: 50px;
+}
+
+.gender input[type="radio"] {
+    transform: translateY(2px);
+    accent-color: red;
+}
+
+.instructor-form input,.assign-subject-instructor input,.assign-subject-student input,.add-student-form input,.add-course input,.add-year-section input,.add-department input,.add-room input,.add-user input {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid gray;
+    outline: none;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.assign-subject-instructor select,.assign-subject-student select,.add-course select,.add-year-section select {
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 10px 15px;
+   
+}
+
+select:focus {
+    outline: none;
+}
+
+.manage-announcement {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    transform: translateY(-80px);
+    display: none;
+}
+
+.ma-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    height: 100vh;
+    background-color: white;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.ma-con-con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.post-btn {
+    background-color: rgb(187, 24, 24);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.post-btn:hover {
+    background-color: rgb(207, 35, 35);
+}
+
+.manage-announcement textarea {
+    height: 10vh;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.manage-announcement textarea:focus {
+    outline: none;
+}
+
+.a-card {
+    width: 63%;
+    margin-bottom: 20px;
+}
+
+
+

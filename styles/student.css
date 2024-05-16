@@ -1,0 +1,778 @@
+* {
+    scrollbar-width: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.topbar {
+    width: 100%;
+    height: 8vh;
+    background-color: #1f1f29;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.topleft,.topright {
+    display: flex;
+    align-items: center;
+}
+
+.topleft {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 21%;
+}
+
+.topright button,.topbar svg {
+    cursor: pointer;
+}
+
+.topright {
+    gap: 30px;
+    padding-right: 20px;
+}
+
+.logout {
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    color: white;
+    margin-left: -30px;
+    transform: scaleX(-1);
+    cursor: pointer;
+}
+
+.topbar h1 span {
+    color: red;
+}
+
+.topbar h1 {
+    font-size: 2rem;
+    padding-left: 30px;
+}
+
+.sidebar {
+    background-color: #750705;
+    color: #fff;
+    width: 20%;
+    height: 92vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    width: 60%;
+    height: 92vh;
+    bottom: 0;
+    position: fixed;
+    right: 20%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(228, 228, 228);
+    background-attachment: fixed;
+}
+
+.content1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.con1 {
+    position: relative; 
+    height: 22vh;
+    padding-left: 20px;
+    border-radius: 10px;
+    color: white;
+    background-image: url('../assets/images/Capture1.JPG');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.con1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px; 
+}
+
+.con1 h1,
+.con1 h3,
+.con1 a {
+    position: relative; 
+    z-index: 1;
+}
+
+.con1 h1 {
+    margin-bottom: -20px;
+    font-weight: normal;
+}
+
+.con1 h3 {
+    font-size: 40px;
+}
+
+.con1 a {
+    text-decoration: none;
+    color: white;
+    background-color: #860a08;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.con1 a:hover {
+    background-color: #a31c1a;
+}
+
+.con2 {
+    overflow: hidden;
+}
+
+.con2 p,.con3 p {
+    font-weight: bold;
+    font-size: 22px;
+    color: rgb(31, 31, 31);
+}
+
+.con2 a,.con3 a{
+    text-decoration: none;
+    float: right;
+    cursor: pointer;
+}
+
+.a-card {
+    padding: 0 15px 10px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    cursor: default;
+    z-index: 10;
+    transition: transform 0.3s ease;
+    box-shadow:  3px 3px 5px rgb(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: relative;
+    padding-top: 20px;
+    width: 95%;
+    flex-wrap: wrap;
+}
+
+.a-card p {
+    font-weight: normal;
+    font-size: 16px;
+    text-decoration: none;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Limit to 5 lines */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    padding-right: 30px;
+}
+
+.zxc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.a-card div {
+    display: flex;
+    align-items: start;
+    gap:20px;
+    position: relative;
+    width: 100%;
+}
+
+.date {
+    margin-top: 5px;
+}
+
+.name {
+    margin-top: 5px;
+}
+
+.card-img {
+    border-radius: 50%;
+    width: 40px;
+}
+
+.a-card span {
+    font-size: 14px;
+}
+
+.pin {
+    color: red;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+}
+
+.announcement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: -15px;
+    gap: 20px;
+}
+
+.con3 {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.con3 p {
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+.con3 img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.con3 button {
+    background-color: rgb(207, 204, 46);
+    border: 1px solid rgb(207, 204, 46);
+    padding: 5px 10px;
+    width: 170px;
+    font-size: 25px;
+    border-radius: 10px;
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    color: white;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.con3 button:hover {
+    background-color: rgb(168, 166, 24);
+    border: 1px solid rgb(255, 246, 124);
+}
+
+.right {
+    background-color: #3a3a47;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-top: 20px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.right h3 {
+    color: white;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.schedule {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 50px;
+    
+}
+
+.schedule-con {
+    text-align: left;
+    background-color: white;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+    line-height: 5px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.9);
+    overflow: hidden;
+    width: 80%;
+}
+
+.schedule a {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    right: 20px;
+    padding-top: 330px;
+}
+
+.schedule-con div {
+    border-left: 3px solid rgb(18, 189, 18);
+    padding: 0 20px;
+}
+
+.schedule-con div p {
+    font-size: 12px;
+}
+
+.time {
+    font-weight: bold;
+}
+
+.calendar {
+    padding-top: 20px;
+}
+
+.sidebar-button img {
+    width: 100px;
+    padding-bottom: 20px;
+}
+
+.sidebar-button {
+    display: flex;
+     flex-direction: column;
+     width: 90%;
+     overflow: auto;
+}
+
+.sidebar-button button{
+    padding: 15px;
+    background: transparent;
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-left: 3px solid #750705;
+   cursor: pointer;
+   text-transform: uppercase;
+}
+
+.sidebar-button button:first-child.active {
+    border-left: 3px solid white;
+}
+
+.sidebar-button button.active {
+    border-left: 3px solid white; 
+}
+
+.sidebar-button button:hover {
+    background-color: #ffffff;
+    color: black;
+    border-radius: 5px;
+    display: flex;
+}
+
+.sidebar-button i {
+    font-size: 25px;
+}
+
+.enroll-btn {
+    background: transparent;
+    border: none;
+}
+
+.enroll-btn:hover {
+    border: none;
+}
+
+.enroll-btn button:focus {
+    background: transparent;
+}
+
+hr {
+    width: 300px;
+}
+
+.sidebar div {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.sidebar select {
+    width: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    outline: 0;
+   background: transparent;
+   color: white;
+}
+
+.sidebar select option {
+    color: black;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 25px -15px 0 -15px;
+    background-color: rgb(0, 0, 0, 0.2);
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+.prev:hover,.next:hover {
+    background-color: #9494a5;
+}
+
+
+/* ENBOLLMENT CSS */
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+input,
+select {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.enrollment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con4 {
+    background-color: rgb(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    padding: 0;
+    left: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    display: none;
+}
+
+.asd {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.asd button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    transform: translateX(100px);
+    margin-top: -20px;
+}
+
+#enrollment {
+    display: none;
+    position: absolute;
+    text-align: justify;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 40px; 
+    border-radius: 10px;
+    overflow: hidden;
+    width: 1000px;
+    position: fixed;
+    top: 30px;
+    overflow: scroll;
+    height: 90vh;
+}
+
+.agreement {
+    display: flex;
+    align-items: center;
+}
+
+.agreement input {
+    transform: translateY(8px);
+}
+
+.enrollment button {
+    width: 200px;
+}
+
+.enrollment input[type="radio"] {
+    accent-color: red;
+}
+
+.enrollment table {
+    width: 1000px;
+}
+
+.enrollment p ,.enrollment label,.enrollment button {
+    font-size: 18px;
+}
+
+.enrollment select {
+    outline: 0;
+}
+
+.con5 {
+    width: 80%;
+    position: fixed;
+    height: 92vh;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    display: none;
+}
+
+.con6,.con7,.con8{
+    width: 100%;
+    display: none;
+    justify-content: center;
+}
+
+.con6 div,.con7 div,.grades {
+    padding: 0 25px;
+}
+
+.profile {
+    padding: 20px 50px;
+}
+
+.profile-header {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+.profile .con1 {
+     z-index: -1;
+}
+
+.profile img {
+    width: 200px;
+    border-radius: 50%;
+    margin-top: -70px;
+}
+
+.profile-header h1 {
+    margin-bottom: -10px;
+}
+
+.qwe p span,.information span {
+    font-weight: 550;
+    color: #424242;
+}
+
+.qwe p {
+    color: #1f1f29;
+}
+
+.qwe1 {
+    width: 300px;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.qwe1 p {
+    font-size: 15px;
+}
+
+.qwe1 button {
+    background: transparent;
+    border: none;
+    color: rgb(47, 150, 197);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.qwe1 button i {
+    font-size: 22px;
+}
+
+.info {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.personal-info h2 {
+     text-transform: uppercase;
+     padding-top: 20px;
+     margin-bottom: -20px;
+}
+
+.hr {
+    width: 100%;
+   border-bottom: 1px solid rgb(156, 156, 156);
+}
+
+.information {
+    display: flex;
+    padding-left: 135px;
+}
+
+.grades {
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 110px;
+    width: 100%;
+}
+
+.grades td {
+    color: black;
+}
+
+.con7 table,.con8 table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.con7 th,.con7 td {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+
+
+}
+.con7 th {
+    background-color: yellow;
+    padding: 20px;
+}
+
+.con7 td {
+    color: black;
+}
+
+#course {
+    width: 500px;
+}
+
+.con8 th {
+    padding: 20px;
+    background-color: yellow;
+}
+
+.con8 td {
+    padding: 10px;
+    background-color: white;
+}
+
+#course-desc {
+    color:black;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.con8 th,.con8 td {
+    border: 1px solid rgb(75, 75, 75);
+}
+
+.grades select {
+    outline: 0;
+}
+
+#ias, #break,#sia312,#ge9,#ms209,#ms209a,#pt206,#natsci,#ws310,#ias311,#ws310a,#pt206a,#it308 {
+    border: none;
+    border-right: 1px solid gray;
+    
+}
+
+#break {
+    border: none;
+}
+
+#sia,#ms209a,#ias311,#ws310a,#pt206a,#it308 {
+    background-color: rgb(131, 184, 46);
+    border: none;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+
+#it308 {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.dashboard-ch {
+    display: none;
+}
+
